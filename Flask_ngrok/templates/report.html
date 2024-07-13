@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ model_name }} Resultados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>{{ model_name }} Resultados</h1>
+        <nav>
+            <ul>
+                <!DOCTYPE html>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sentiment">Análisis de sentimiento</a></li>
+                <li><a href="/generate">Generación de texto</a></li>
+                <li><a href="/logistic_regression_report">Reporte Regresión Logística</a></li>
+                <li><a href="/kneighbors_report">Reporte KNeighbors</a></li>
+            </ul
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Resultados</h2>
+            <div class="report">
+                {{ report|safe }}
+            </div>
+            <a href="{{ url_for('download_file', filename='LogisticRegressionModel_classification_report.csv') }}">Descargar
+                Resultados Regresión Logística</a>
+                <br>
+            <a href="{{ url_for('download_file', filename='KNNModel_classification_report.csv') }}">Descargar Resultados KNeighbors
+                </a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Despliegue de algoritmos - Sara Díaz</p>
+    </footer>
+</body>
+
+</html>

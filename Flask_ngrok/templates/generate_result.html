@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la generación de texto:</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Generación de texto (HF)</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sentiment">Análisis de sentimiento</a></li>
+                <li><a href="/generate">Generación de texto</a></li>
+                <li><a href="/logistic_regression_report">Reporte Regresión Logística</a></li>
+                <li><a href="/kneighbors_report">Reporte KNeighbors</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Texto generado:</h2>
+            <p>{{ result }}</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Despliegue de algoritmos - Sara Díaz</p>
+    </footer>
+</body>
+
+</html>

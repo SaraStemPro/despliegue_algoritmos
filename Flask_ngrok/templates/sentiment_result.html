@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del análisis de sentimiento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Resultado del análisis de sentimiento:</h1>
+        <nav>
+            <ul>
+                <!DOCTYPE html>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/sentiment">Análisis de sentimiento</a></li>
+                <li><a href="/generate">Generación de texto</a></li>
+                <li><a href="/logistic_regression_report">Reporte Regresión Logística</a></li>
+                <li><a href="/kneighbors_report">Reporte KNeighbors</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section
+            <h2>Resultado del sentimiento:</h2>
+            <p>Etiqueta: {{ result['label'] }}</p>
+            <p>Score: {{ result['score'] }}</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Despliegue de algoritmos - Sara Díaz</p>
+    </footer>
+</body>
+
+</html>
