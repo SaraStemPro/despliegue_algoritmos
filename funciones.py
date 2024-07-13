@@ -41,7 +41,7 @@ def data_treatment(df):
     return X_train, X_test, y_train, y_test
 
 def setup_ngrok(port=6000):
-    ngrok.set_auth_token('2j9OBP1rEMPvAVn8lRDCAgr273D_7PvtaDu2Wt9ey8crPjJRi')
+    ngrok.set_auth_token('token_aqui')
     ngrok.kill()
     public_url = ngrok.connect(port)
     print("ngrok URL:", public_url)
